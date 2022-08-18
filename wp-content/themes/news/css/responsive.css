@@ -1,0 +1,273 @@
+@media(max-width:1199px) {}
+
+
+
+
+
+@media(max-width:991px) {
+    .header_nav {
+        display: none;
+    }
+
+    .search {
+        margin-left: 0px;
+    }
+
+    .nav_menu {
+        margin-left: 15px;
+    }
+
+    .insider_news+.insider_news {
+        margin-top: 0px;
+    }
+
+    .thumb_news_insider {
+        margin-top: 25px !important;
+    }
+
+    .photo_feature .insider_news {
+        margin-top: 25px;
+    }
+
+    .photo_feature .main_title {
+        margin-bottom: 5px;
+    }
+
+    .footer-wrap {
+        display: block;
+    }
+
+    .social_media ul {
+        justify-content: center;
+    }
+
+    .footer_logo {
+        margin: 12px 0;
+    }
+
+    .details_page .social_media ul {
+        display: flex;
+    }
+
+    .details_page .social_media ul li+li a {
+        margin-top: 0px;
+        margin-left: 7px;
+    }
+
+    .share_news {
+        margin-top: 0;
+    }
+
+    .details_page .social_media {
+        margin-top: 0;
+    }
+
+    .details_left_sidebar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .details_main {
+        margin-top: 25px;
+    }
+
+    .deatils_sidebar {
+        margin-top: 25px;
+    }
+
+    .details_related_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -12.5px;
+    }
+
+    .details_related_wrap .thumbnail_news_wrap {
+        width: 50%;
+        padding: 0 12.5px;
+    }
+
+    .deatils_sidebar .main_title {
+        margin-bottom: 0;
+    }
+
+    .contact_page_wrap {
+        display: block;
+    }
+}
+
+
+
+
+
+@media(max-width:767px) {
+    .post_main_news {
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+@media(max-width:575px) {
+    .post_main_news .post_media {
+        height: auto;
+    }
+
+    .post_main_news .post_title h2 {
+        font-size: 18px;
+    }
+
+    .meta_tags ul li {
+        width: 50%;
+    }
+
+    .meta_tags ul {
+        flex-wrap: wrap;
+    }
+
+    .meta_tags ul li+li {
+        padding-left: 0;
+        margin-left: 0;
+        ;
+    }
+
+    .meta_tags ul li+li::before {
+        display: none;
+    }
+
+    .meta_tags ul li:last-child {
+        margin-top: 10px;
+    }
+
+    .thumbnails_news_media {
+        height: auto;
+    }
+
+    .mb {
+        margin-bottom: 30px;
+    }
+
+    .mt {
+        margin-top: 30px;
+    }
+
+    .pt {
+        padding-top: 30px;
+    }
+
+    .pb {
+        padding-bottom: 30px;
+    }
+
+    .main_title h3 {
+        font-size: 20px;
+    }
+
+    .entertainemt_news .thumbnails_news_media {
+        height: auto;
+    }
+
+    .sports .thumbnails_news_media {
+        height: auto;
+    }
+
+    .business .thumbnails_news_media {
+        height: auto;
+    }
+
+    .insider_news_media {
+        height: auto;
+    }
+
+    .photo_feature .insider_news_media {
+        height: auto;
+    }
+
+    .nav-tabs {
+        overflow-y: hidden;
+        overflow-x: scroll;
+        flex-wrap: inherit;
+    }
+
+    .nav-tabs .nav-link {
+        white-space: nowrap;
+    }
+
+    .tab_list {
+        overflow: hidden;
+        margin-left: 50px;
+    }
+
+    .breadcrumb {
+        flex-wrap: inherit;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .breadcrumb li {
+        white-space: nowrap;
+    }
+
+    .details_left_sidebar {
+        display: block;
+    }
+
+    .share_news {
+        margin-top: 30px;
+    }
+
+    .details_page .social_media {
+        margin-top: 50px;
+    }
+
+    .details_main h1 {
+        font-size: 32px;
+    }
+
+    blockquote {
+        padding: 20px;
+        padding-left: 45px;
+        font-size: 16px;
+    }
+
+    blockquote::before {
+        left: 0;
+    }
+
+    .details_related_wrap {
+        display: block;
+        margin: 0;
+    }
+
+    .details_related_wrap .thumbnail_news_wrap {
+        width: 100%;
+        padding: 0;
+    }
+
+    .deatils_sidebar .thumbnails_news_media {
+        height: auto;
+    }
+
+    .category_page .thumbnails_news_media {
+        height: auto;
+    }
+
+    .contact_page_info {
+        padding: 30px;
+    }
+    .contact_social{
+        margin-top:25px;
+    }
+    .contact_page_info h3{
+        margin-bottom:20px;
+    }
+    .contact_page_info p{
+        margin-top:25px;
+    }
+    .contact_page_form{
+        padding:30px;
+    }
+
+}
