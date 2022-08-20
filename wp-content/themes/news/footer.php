@@ -23,11 +23,7 @@
     </div>
 </footer>
 
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/metisMenu.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/custom.js"></script>
+<?php wp_footer(); ?>
 </body>
 
 </html>
