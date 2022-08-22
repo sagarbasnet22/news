@@ -4,17 +4,20 @@
             <div class="footer_social_media">
                 <div class="social_media">
                     <ul>
-                        <li><a href="#" title="facebook"><i class="lab la-facebook-f"></i></a></li>
-                        <li><a href="#" title="twitter"><i class="lab la-twitter"></i></a></li>
-                        <li><a href="#" title="instagram"><i class="lab la-instagram"></i></a></li>
-                        <li><a href="#" title="linkedin"><i class="lab la-linkedin"></i></a></li>
-                        <li><a href="#" title="youtube"><i class="lab la-youtube"></i></a></li>
+                        <?php 
+                        if( have_rows('social_media_list') ): ?>
+                        <?php 
+                        while( have_rows('social_media_list') ): the_row() ?>
+                        <li><a href="<?php the_sub_field('social_media_link'); ?>"
+                                title="facebook"><?php the_sub_field('social_media_icon'); ?></a></li>
+                        <?php endwhile; ?>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
 
             <div class="footer_logo">
-                <a href="#"><img src="img/footer-logo.svg" alt="images"></a>
+                <a href="#"><img src="<?php the_field('footer_logo', 'option') ?>" alt="images"></a>
             </div>
             <div class="copy_right">
                 <p>© 2022 News Portal. All Rights Reserved.</p>

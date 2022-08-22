@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Search 
-    $(".search-box i").on("click", function () {
+    $(".search-box").on("click", function () {
         $(".search-overlay").toggleClass("search-overlay-active");
     });
     $(".search-overlay-close").on("click", function () {
