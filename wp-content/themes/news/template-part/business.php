@@ -6,72 +6,35 @@
             <a href="#">View more <i class="las la-long-arrow-alt-right"></i></a>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-12">
+        <?php 
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'category_name' => 'business',
+                    'posts_per_page' => 6,
+                );
+                $arr_posts = new WP_Query( $args );
+                
+                if ( $arr_posts->have_posts() ) :
+                    while ( $arr_posts->have_posts() ) :
+                        $arr_posts->the_post();
+            ?>
+            <div class="col-lg-4 col-md-12">
                 <div class="thumbnail_news_wrap">
                     <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news6.jpg" alt="images"></a>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="images"></a>
                     </div>
                     <div class="thumbnail_news_content">
                         <h3>
-                            <a href="#">This book helped me understand modern politics better By 2026, the Gates
-                                Foundation aims to spend $9 billion</a>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news7.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news8.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news9.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news10.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news11.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3>
-                            <a href="#">This book helped me understand modern politics better By 2026, the Gates
-                                Foundation aims to spend $9 billion</a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+                endif; 
+            ?>
         </div>
     </div>
 </section>

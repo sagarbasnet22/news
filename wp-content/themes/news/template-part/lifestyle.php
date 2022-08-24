@@ -6,86 +6,33 @@
             <a href="#">View more <i class="las la-long-arrow-alt-right"></i></a>
         </div>
         <div class="row">
+            <?php 
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'category_name' => 'lifestyle',
+                    'posts_per_page' => 8,
+                );
+                $arr_posts = new WP_Query( $args );
+                
+                if ( $arr_posts->have_posts() ) :
+                    while ( $arr_posts->have_posts() ) :
+                        $arr_posts->the_post();
+            ?>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="thumbnail_news_wrap">
                     <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news1.jpg" alt="images"></a>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="images"></a>
                     </div>
                     <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
+                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news2.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news3.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news4.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news5.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news6.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news7.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news8.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                    </div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+                endif; 
+            ?>
         </div>
     </div>
 </section>

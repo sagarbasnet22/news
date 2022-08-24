@@ -17,7 +17,7 @@
             </div>
 
             <div class="footer_logo">
-                <a href="#"><img src="<?php the_field('footer_logo', 'option') ?>" alt="images"></a>
+                <a href="<?php echo home_url(); ?>"><img src="<?php the_field('footer_logo', 'option') ?>" alt="images"></a>
             </div>
             <div class="copy_right">
                 <p>© 2022 News Portal. All Rights Reserved.</p>

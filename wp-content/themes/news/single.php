@@ -3,6 +3,11 @@ $title = 'Details Page';
 include 'header.php';
 ?>
 
+<?php 
+    if ( have_posts() ) :
+    while ( have_posts() ) : the_post(); 
+?>
+
 <nav aria-label="breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
@@ -12,6 +17,10 @@ include 'header.php';
     </div>
 </nav>
 
+<?php 
+    endwhile;
+    endif; 
+?>
 
 <!-- Details Page  -->
 <section class="details_page mb">
@@ -20,6 +29,18 @@ include 'header.php';
             <div class="col-lg-8 col-md-12">
                 <div class="details_main">
                     <h1><?php the_title(); ?></h1>
+                    <div class="meta_tags">
+                        <ul>
+                            <li>By: <a href="<?php the_permalink(); ?>"><?php the_author(); ?></a></li>
+                            <li><img src="<?php bloginfo('template_url'); ?>/img/calendar.png" alt="Calendar"
+                                    title="Date"><?php echo get_the_date(); ?></li>
+                            <li><img src="<?php bloginfo('template_url'); ?>/img/time.png" alt="Time" title="Time">
+                                <?php
+                                        echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
+                                    ?>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="featured_img">
                         <img src="<?php the_post_thumbnail_url(); ?>" alt="images">
                     </div>
@@ -32,21 +53,17 @@ include 'header.php';
                         <h3>Related Articles</h3>
                     </div>
                     <div class="details_related_wrap">
-                    <?php 
-                        $args = array(
-                            'post_type' => 'post',
-                            'post_status' => 'publish',
-                            'category_name' => 'breaking-news',
-                        );
-                        $arr_posts = new WP_Query( $args );
-                        
-                        if ( $arr_posts->have_posts() ) :
-                            while ( $arr_posts->have_posts() ) :
-                                $arr_posts->the_post();
+                        <?php 
+                        $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 
+                        'posts_per_page' => '5', 
+                        'post__not_in' => array($post->ID) ) );
+                        if( $related ) foreach( $related as $post ) {
+                        setup_postdata($post);
                         ?>
                         <div class="thumbnail_news_wrap">
                             <div class="thumbnails_news_media">
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="images"></a>
+                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img
+                                        src="<?php the_post_thumbnail_url(); ?>" alt="images"></a>
                             </div>
                             <div class="thumbnail_news_content">
                                 <div class="tags">
@@ -64,8 +81,8 @@ include 'header.php';
                             </div>
                         </div>
                         <?php 
-                            endwhile;
-                            endif; 
+                            }
+                            wp_reset_postdata(); 
                         ?>
                     </div>
                 </div>

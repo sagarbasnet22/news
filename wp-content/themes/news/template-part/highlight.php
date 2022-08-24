@@ -6,8 +6,8 @@
             $args = array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
-                'category_name' => 'breaking-news',
-                'posts_per_page' => 3,
+                'category_name' => 'highlight',
+                'posts_per_page' => 5,
             );
             $arr_posts = new WP_Query( $args );
               
@@ -25,9 +25,8 @@
                             </div>
                             <div class="meta_tags">
                                 <ul>
-                                    <li>By: <a href="<?php the_permalink(); ?>"><?php the_author(); ?></a></li>
                                     <li><img src="<?php bloginfo('template_url'); ?>/img/calendar.png" alt="Calendar"
-                                            title="Date"><?php echo get_the_date(); ?></li>
+                                            title="Date"><?php echo get_the_date('M d, Y'); ?></li>
                                     <li><img src="<?php bloginfo('template_url'); ?>/img/time.png" alt="Time" title="Time">
                                     <?php
                                         echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';

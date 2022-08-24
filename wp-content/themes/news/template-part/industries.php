@@ -1,5 +1,5 @@
 <!-- Industry  -->
-<section class="industry pt pb mb">
+<!-- <section class="industry pt pb mb">
     <div class="container">
         <div class="main_title light_title">
             <h3>Industries</h3>
@@ -226,5 +226,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Industry End  -->

@@ -1,5 +1,5 @@
 <!-- Photo Feature -->
-<section class="photo_feature mb">
+<!-- <section class="photo_feature mb">
     <div class="container">
         <div class="main_title">
             <h3>Photo Features</h3>
@@ -56,5 +56,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Photo Feature End  -->
