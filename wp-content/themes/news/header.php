@@ -19,8 +19,8 @@
         <div class="container">
             <div class="h_wrap">
                 <div class="logo">
-                    <a href="<?php echo home_url(); ?>"><img src="<?php the_field('logo', 'option'); ?>"
-                            alt="Logo" title="Logo"></a>
+                    <a href="<?php echo home_url(); ?>"><img src="<?php the_field('logo', 'option'); ?>" alt="Logo"
+                            title="Logo"></a>
                 </div>
                 <div class="header_menu">
                     <div class="header_nav">
@@ -49,7 +49,9 @@
                                     <div class="search-overlay-form">
                                         <form method="post" action="">
                                             <input type="text" class="input-search" placeholder="Search here...">
-                                            <button type="submit"><img src="<?php bloginfo('template_url'); ?>/img/search_light.png" alt="Search"></button>
+                                            <button type="submit"><img
+                                                    src="<?php bloginfo('template_url'); ?>/img/search_light.png"
+                                                    alt="Search"></button>
                                         </form>
                                     </div>
                                 </div>
@@ -69,7 +71,8 @@
     <div id="mySidenav" class="sidenav">
         <div class="mobile-logo">
             <a href="<?php get_template_directory(); ?>"><img src="<?php the_field('logo', 'option') ?>" alt="logo"></a>
-            <a href="javascript:void(0)" id="close-btn" class="closebtn"><img src="<?php bloginfo('template_url'); ?>/img/cross.png" alt="Menu" title="Close"></a>
+            <a href="javascript:void(0)" id="close-btn" class="closebtn"><img
+                    src="<?php bloginfo('template_url'); ?>/img/cross.png" alt="Menu" title="Close"></a>
         </div>
         <div class="no-bdr1" id="menu1">
             <?php
@@ -86,17 +89,33 @@
             </div>
             <div class="social_media">
                 <ul>
-                    <?php 
-                        if( have_rows('social_media_list') ): ?>
-                    <?php 
-                        while( have_rows('social_media_list') ): the_row() ?>
-                    <li><a href="<?php the_sub_field('social_media_link'); ?>" title="facebook"
-                            target="_blank"><?php the_sub_field('social_media_icon'); ?></a></li>
-                    <?php endwhile; ?>
-                    <?php endif; ?>
+                    <li>
+                        <a href="<?php the_field('facebook_link', 'option'); ?>" title="Facebook" target="_blank">
+                        <img src="<?php the_field('facebook_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php the_field('twitter_link', 'option'); ?>" title="Twitter" target="_blank">
+                        <img src="<?php the_field('twitter_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php the_field('instagram_link', 'option'); ?>" title="Instagram" target="_blank">
+                        <img src="<?php the_field('instagram_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php the_field('linkedin_link', 'option'); ?>" title="Linkedin" target="_blank">
+                        <img src="<?php the_field('linkedin_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php the_field('youtube_link', 'option'); ?>" title="Youtube" target="_blank">
+                        <img src="<?php the_field('youtube_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
     <!-- Mobile Menu End -->
-

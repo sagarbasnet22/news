@@ -34,14 +34,31 @@ get_header();
                 </ul>
                 <?php the_content(); ?>
                 <ul class="contact_social">
-                    <?php 
-                        if( have_rows('social_media_list') ): ?>
-                    <?php 
-                        while( have_rows('social_media_list') ): the_row() ?>
-                    <li><a href="<?php the_sub_field('social_media_link'); ?>" title="facebook"
-                            target="_blank"><?php the_sub_field('social_media_icon'); ?></a></li>
-                    <?php endwhile; ?>
-                    <?php endif; ?>
+                    <li>
+                        <a href="<?php the_field('facebook_link', 'option'); ?>" title="Facebook" target="_blank">
+                            <img src="<?php the_field('facebook_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php the_field('twitter_link', 'option'); ?>" title="Twitter" target="_blank">
+                            <img src="<?php the_field('twitter_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php the_field('instagram_link', 'option'); ?>" title="Instagram" target="_blank">
+                            <img src="<?php the_field('instagram_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php the_field('linkedin_link', 'option'); ?>" title="Linkedin" target="_blank">
+                            <img src="<?php the_field('linkedin_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php the_field('youtube_link', 'option'); ?>" title="Youtube" target="_blank">
+                            <img src="<?php the_field('youtube_icon', 'option'); ?>" alt="images">
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="contact_page_form">
