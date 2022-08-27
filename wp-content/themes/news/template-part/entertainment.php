@@ -5,12 +5,13 @@
         <div class="main_title light_title">
             <h3>
                 <?php
-                    foreach((get_the_category()) as $category) { 
-                        echo $category->cat_name . ' '; 
-                    } 
+                    $cat = get_term_by( 'slug', 'entertainment', 'category');
+                    echo $cat->name;
                 ?>
             </h3>
-            <a href="#">View more <i class="las la-long-arrow-alt-right"></i></a>
+            <?php 
+             ?>
+            <a href="<?php echo get_category_link("7");?>">View more <img src="<?php bloginfo('template_url'); ?>/img/more-white.png" alt="images"></a>
         </div>
         <div class="row">
             <?php 
@@ -33,6 +34,17 @@
                     </div>
                     <div class="thumbnail_news_content">
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <div class="meta_tags">
+                            <ul>
+                                <li><img src="<?php bloginfo('template_url'); ?>/img/calendar-light.png" alt="Calendar"
+                                        title="Date"><?php echo get_the_date('M d, Y'); ?></li>
+                                <li><img src="<?php bloginfo('template_url'); ?>/img/time-light.png" alt="Time" title="Time">
+                                <?php
+                                    echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
+                                ?>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -31,7 +31,7 @@ include 'header.php';
                     <h1><?php the_title(); ?></h1>
                     <div class="meta_tags">
                         <ul>
-                            <li>By: <a href="<?php the_permalink(); ?>"><?php the_author(); ?></a></li>
+                            <li>By: <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a></li>
                             <li><img src="<?php bloginfo('template_url'); ?>/img/calendar.png" alt="Calendar"
                                     title="Date"><?php echo get_the_date(); ?></li>
                             <li><img src="<?php bloginfo('template_url'); ?>/img/time.png" alt="Time" title="Time">

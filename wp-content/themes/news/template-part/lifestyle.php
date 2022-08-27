@@ -2,8 +2,13 @@
 <section class="lifestyle mt mb">
     <div class="container">
         <div class="main_title">
-            <h3>Lifestyle</h3>
-            <a href="#">View more <i class="las la-long-arrow-alt-right"></i></a>
+            <h3>
+                <?php
+                    $cat = get_term_by( 'slug', 'lifestyle', 'category');
+                    echo $cat->name;
+                ?>
+            </h3>
+            <a href="<?php echo get_category_link("8");?>">View more <img src="<?php bloginfo('template_url'); ?>/img/more.png" alt="images"></a>
         </div>
         <div class="row">
             <?php 
@@ -26,6 +31,17 @@
                     </div>
                     <div class="thumbnail_news_content">
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <div class="meta_tags">
+                            <ul>
+                                <li><img src="<?php bloginfo('template_url'); ?>/img/calendar.png" alt="Calendar"
+                                        title="Date"><?php echo get_the_date('M d, Y'); ?></li>
+                                <li><img src="<?php bloginfo('template_url'); ?>/img/time.png" alt="Time" title="Time">
+                                <?php
+                                    echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago';
+                                ?>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

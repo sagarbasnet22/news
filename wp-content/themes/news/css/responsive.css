@@ -5,6 +5,9 @@
 
 
 @media(max-width:991px) {
+    .header{
+        padding:22px 0;
+    }
     .header_nav {
         display: none;
     }
@@ -35,6 +38,7 @@
 
     .footer-wrap {
         display: block;
+        text-align: center;
     }
 
     .social_media ul {
@@ -42,7 +46,7 @@
     }
 
     .footer_logo {
-        margin: 12px 0;
+        margin: 15px 0;
     }
 
     .details_page .social_media ul {
@@ -93,6 +97,33 @@
     .contact_page_wrap {
         display: block;
     }
+    .highlight_news .col-lg-4:nth-child(4) .post_media {
+        height: 400px;
+    }
+    .highlight_news .col-lg-4:nth-child(5) .post_media {
+        height: 400px;
+    }
+    .business .col-lg-4:nth-child(1) {
+        width: 50%;
+    }
+    .business .col-lg-4:nth-child(2) {
+        width: 50%;
+    }
+    .business .col-lg-4:nth-child(3) {
+        width: 50%;
+    }
+    .business .col-lg-4:nth-child(4) {
+        width: 50%;
+    }
+    .business .col-lg-4:nth-child(5) {
+        width: 50%;
+    }
+    .business .col-lg-4:nth-child(6) {
+        width: 50%;
+    }
+    .footer_logo img{
+        width: auto;
+    }
 }
 
 
@@ -100,9 +131,7 @@
 
 
 @media(max-width:767px) {
-    .post_main_news {
-        margin-bottom: 25px;
-    }
+    
 }
 
 
@@ -137,32 +166,28 @@
         display: none;
     }
 
-    .meta_tags ul li:last-child {
-        margin-top: 10px;
-    }
-
     .thumbnails_news_media {
         height: auto;
     }
 
     .mb {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     .mt {
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
     .pt {
-        padding-top: 30px;
+        padding-top: 40px;
     }
 
     .pb {
-        padding-bottom: 30px;
+        padding-bottom: 40px;
     }
 
     .main_title h3 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .entertainemt_news .thumbnails_news_media {
@@ -268,6 +293,48 @@
     }
     .contact_page_form{
         padding:30px;
+    }
+    #mySidenav{
+        width: 100%;
+    }
+    .sidenav{
+        margin-right:-100%;
+    }
+    .post_main_news{
+        margin-top:30px;
+    }
+    .highlight_news .col-lg-4:nth-child(4) {
+        width: 100%;
+    }
+    .highlight_news .col-lg-4:nth-child(5) {
+        width: 100%;
+    }
+    .highlight_news .col-lg-4:nth-child(4) .post_media {
+        height: auto;
+    }
+    .highlight_news .col-lg-4:nth-child(5) .post_media {
+        height: auto;
+    }
+    .lifestyle .thumbnails_news_media {
+        height: auto;
+    }
+    .business .col-lg-4:nth-child(1) {
+        width: 100%;
+    }
+    .business .col-lg-4:nth-child(2) {
+        width: 100%;
+    }
+    .business .col-lg-4:nth-child(3) {
+        width: 100%;
+    }
+    .business .col-lg-4:nth-child(4) {
+        width: 100%;
+    }
+    .business .col-lg-4:nth-child(5) {
+        width: 100%;
+    }
+    .business .col-lg-4:nth-child(6) {
+        width: 100%;
     }
 
 }

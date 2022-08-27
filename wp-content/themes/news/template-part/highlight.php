@@ -15,7 +15,7 @@
                 while ( $arr_posts->have_posts() ) :
                     $arr_posts->the_post();
                     ?>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
                         <article class="post_main_news">
                             <div class="post_media">
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="images"></a>

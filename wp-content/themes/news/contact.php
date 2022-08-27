@@ -63,42 +63,7 @@ get_header();
             </div>
             <div class="contact_page_form">
                 <form action="">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="">Full Name</label>
-                                <input type="text" class="form-control" placeholder="Full Name" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="">Email</label>
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="">Subject</label>
-                                <input type="text" class="form-control" placeholder="Subject">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="">Phone</label>
-                                <input type="text" class="form-control" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="">Message</label>
-                                <textarea name="" id="" rows="5" class="form-control"
-                                    placeholder="Write your message..."></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <button type="submit">Send Message</button>
-                        </div>
-                    </div>
+                    <?php echo do_shortcode('[contact-form-7 id="235" title="Contact form 1"]'); ?>
                 </form>
             </div>
         </div>

@@ -1,13 +1,12 @@
 <?php
-$title = 'Author Page';
-include 'header.php';
+    get_header();
 ?>
 
 <nav aria-label="breadcrumb">
     <div class="container">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Sagar Basnet</li>
+            <li class="breadcrumb-item"><a href="<?php echo home_url(); ?>">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><?php the_author(); ?></li>
         </ol>
     </div>
 </nav>
@@ -19,9 +18,9 @@ include 'header.php';
     <div class="container">
         <div class="author_head">
             <div class="authors_media">
-                <img src="img/news4.jpg" alt="images">
+                <img src="<?php bloginfo('template_url'); ?>/img/author.png" alt="images">
                 <div class="authors_content">
-                    <h3>Sagar Basnet</h3>
+                    <h3><?php the_author(); ?></h3>
                     <ul>
                         <li><a href="#"><i class="lab la-facebook-f"></i></a></li>
                         <li><a href="#"><i class="lab la-twitter"></i></a></li>
@@ -30,114 +29,28 @@ include 'header.php';
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news1.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                        <p>
-                            Why I made a deerskin medicine bag with Washington state’s Teacher.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news2.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                        <p>
-                            Why I made a deerskin medicine bag with Washington state’s Teacher.
-                        </p>
+        <div class="author-col">
+            <div class="row">
+                <?php 
+                if ( have_posts() ) :
+                while ( have_posts() ) : the_post(); 
+            ?>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="thumbnail_news_wrap">
+                        <div class="thumbnails_news_media">
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img
+                                    src="<?php echo the_post_thumbnail_url(); ?>" alt="images"></a>
+                        </div>
+                        <div class="thumbnail_news_content">
+                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        </div>
                     </div>
                 </div>
+                <?php 
+                endwhile;
+                endif; 
+            ?>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news3.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                        <p>
-                            Why I made a deerskin medicine bag with Washington state’s Teacher.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news4.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                        <p>
-                            Why I made a deerskin medicine bag with Washington state’s Teacher.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news5.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                        <p>
-                            Why I made a deerskin medicine bag with Washington state’s Teacher.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news6.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                        <p>
-                            Why I made a deerskin medicine bag with Washington state’s Teacher.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news7.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                        <p>
-                            Why I made a deerskin medicine bag with Washington state’s Teacher.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="thumbnail_news_wrap">
-                    <div class="thumbnails_news_media">
-                        <a href="#"><img src="img/news8.jpg" alt="images"></a>
-                    </div>
-                    <div class="thumbnail_news_content">
-                        <h3><a href="#">By 2026, the Gates Foundation aims to spend $9 billion</a></h3>
-                        <p>
-                            Why I made a deerskin medicine bag with Washington state’s Teacher.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="load_more_btn">
-            <a href="#">Load More <i class="las la-long-arrow-alt-right"></i></a>
         </div>
     </div>
 </section>
@@ -146,5 +59,5 @@ include 'header.php';
 
 
 <?php
-include 'footer.php';
+    get_footer();
 ?>
