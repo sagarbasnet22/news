@@ -13,6 +13,18 @@ $(document).ready(function () {
     $("#close-btn, .nav_menu").click(function () {
         $("#mySidenav, .body-bg").toggleClass("active");
     });
+    // Sidebar End 
+
+    // Scroll Top Header 
+    $(window).scroll(function() {
+        var $height = $(window).scrollTop();
+      if($height > 400) {
+            $('.scroll_header').addClass('active');
+        } else {
+            $('.scroll_header').removeClass('active');
+        }
+    });
+    // Scroll Top Header End 
 
 
     // Dark Mode 

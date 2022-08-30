@@ -16,14 +16,89 @@
 
     <div class="body-bg"></div>
 
+    <!-- Scroll Header  -->
+    <div class="scroll_header">
+        <div class="container">
+            <div class="scroll-header-wrap">
+                <div class="scroll_logo">
+                    <a href="<?php echo home_url(); ?>"><img src="<?php the_field('logo', 'option'); ?>" alt="Logo"
+                            title="Logo">
+                    </a>
+                </div>
+                <div class="scroll_menu">
+                    <nav>
+                        <?php
+                            wp_nav_menu( array( 
+                                'theme_location' => 'primary_menu', 
+                            )); 
+                        ?>
+                    </nav>
+                </div>
+                <div class="scroll-search">
+                    <div class="search">
+                        <div class="search-box" title="Search">
+                            <img src="<?php bloginfo('template_url'); ?>/img/search.png" alt="Search">
+                        </div>
+                        <div class="search-overlay">
+                            <div class="d-table">
+                                <div class="d-table-cell">
+                                    <div class="search-overlay-layer"></div>
+                                    <div class="search-overlay-layer"></div>
+                                    <div class="search-overlay-layer"></div>
+                                    <div class="search-overlay-close">
+                                        <span class="search-overlay-close-line"></span>
+                                        <span class="search-overlay-close-line"></span>
+                                    </div>
+                                    <div class="search-overlay-form">
+                                        <?php get_search_form(); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll Header End  -->
+
     <!-- Header  -->
     <Header class="header">
         <div class="container">
             <div class="h_wrap">
-                <div class="nav_menu" title="Menu">
+                <div class="social_media mobile_social_media">
+                    <ul>
+                        <li>
+                            <a href="<?php the_field('facebook_link', 'option'); ?>" title="Facebook" target="_blank">
+                                <img src="<?php the_field('facebook_icon', 'option'); ?>" alt="images">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php the_field('twitter_link', 'option'); ?>" title="Twitter" target="_blank">
+                                <img src="<?php the_field('twitter_icon', 'option'); ?>" alt="images">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php the_field('instagram_link', 'option'); ?>" title="Instagram" target="_blank">
+                                <img src="<?php the_field('instagram_icon', 'option'); ?>" alt="images">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php the_field('linkedin_link', 'option'); ?>" title="Linkedin" target="_blank">
+                                <img src="<?php the_field('linkedin_icon', 'option'); ?>" alt="images">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php the_field('youtube_link', 'option'); ?>" title="Youtube" target="_blank">
+                                <img src="<?php the_field('youtube_icon', 'option'); ?>" alt="images">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav_menu desktop_only_menu" title="Menu">
                     <img src="<?php bloginfo('template_url'); ?>/img/menu.png" alt="Menu" title="Menu">
                 </div>
-                <div class="logo">
+                <div class="logo desktop_only_logo">
                     <a href="<?php echo home_url(); ?>"><img src="<?php the_field('logo', 'option'); ?>" alt="Logo"
                             title="Logo"></a>
                 </div>
@@ -45,6 +120,14 @@
     <div class="header_nav">
         <div class="container">
             <div class="header-nav-wrap">
+                <div class="nav_menu mobile_only_menu" title="Menu">
+                    <img src="<?php bloginfo('template_url'); ?>/img/menu.png" alt="Menu" title="Menu">
+                </div>
+                <div class="logo mobile_only_logo">
+                    <a href="<?php echo home_url(); ?>"><img src="<?php the_field('logo', 'option'); ?>" alt="Logo"
+                            title="Logo">
+                    </a>
+                </div>
                 <nav>
                     <?php
                     wp_nav_menu( array( 
@@ -53,7 +136,7 @@
                 ?>
                 </nav>
                 <div class="navigation_utilities">
-                    <div class="social_media">
+                    <div class="social_media desktop_only_social_media">
                         <ul>
                             <li>
                                 <a href="<?php the_field('facebook_link', 'option'); ?>" title="Facebook"

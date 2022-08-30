@@ -6,20 +6,46 @@
 
 @media(max-width:991px) {
     .header{
-        padding:22px 0;
+        padding:15px 0;
     }
-    .header_nav {
+    .scroll_header{
         display: none;
     }
-
     .search {
         margin-left: 0px;
     }
-
-    .nav_menu {
-        margin-left: 15px;
+    .desktop_only_menu{
+        display: none;
     }
-
+    .desktop_only_logo {
+        display: none;
+    }
+    .mobile_social_media{
+        display: block;
+    }
+    .mobile_only_menu{
+        display: block;
+    }
+    .mobile_only_logo{
+        display: block;
+        padding-left:15px;
+    }
+    .header_nav{
+        padding:15px 0;
+        position: sticky;
+        top:-1px;
+        z-index: 1020;
+        box-shadow: 0 15px 30px 0 rgb(0 0 0 / 15%);
+    }
+    .header-nav-wrap nav {
+        display: none;
+    }
+    .desktop_only_social_media{
+        display: none;
+    }
+    .mobile_social_media ul {
+        display: flex;
+    }
     .insider_news+.insider_news {
         margin-top: 0px;
     }
