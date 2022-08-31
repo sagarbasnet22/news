@@ -375,5 +375,12 @@
         margin-top:15px;
         font-size: 20px;
     }
+    .thankyou-page span{
+        margin-top:15px;
+        font-size: 24px;
+    }
+    .thankyou-page h1{
+        font-size: 40px;
+    }
 
 }

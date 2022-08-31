@@ -61,4 +61,19 @@ function add_featured_image_support_to_your_wordpress_theme() {
 add_action( 'after_setup_theme', 'add_featured_image_support_to_your_wordpress_theme' );
 // Featured Images end
 
+// Thankyou Page
+add_action( 'wp_footer', 'mycustom_wp_footer' );
+
+function mycustom_wp_footer() {
+    ?>
+    <script>
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        location = 'https://meroideas.com/thank-you/';
+    }
+    , false );
+    </script>
+    <?php
+}
+// Thankyou Page End
+
 ?>
