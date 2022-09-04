@@ -382,5 +382,33 @@
     .thankyou-page h1{
         font-size: 40px;
     }
+    .newsletter-col{
+        display: block;
+    }
+    .newsletter-left{
+        width: 100%;
+    }
+    .newsletter-right{
+        width: 100%;
+        padding:25px;
+    }
+    .newsletter-col{
+        max-width: 100%;
+    }
+    .newsletter-right h3{
+        font-size: 25px;
+    }
+    .newsletter-right p{
+        margin-bottom:10px;
+    }
+    .social_media ul li a img{
+        height: 22px;
+    }
+    .social_media ul li+li a {
+        margin-left: 8px;
+    }
+    .logo img{
+        height: 35px;
+    }
 
 }

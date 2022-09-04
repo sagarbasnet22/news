@@ -16,15 +16,25 @@ $(document).ready(function () {
     // Sidebar End 
 
     // Scroll Top Header 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var $height = $(window).scrollTop();
-      if($height > 400) {
+        if ($height > 400) {
             $('.scroll_header').addClass('active');
         } else {
             $('.scroll_header').removeClass('active');
         }
     });
     // Scroll Top Header End 
+
+
+    // Newsletter 
+    setTimeout(function () {
+        $('.newsletter').fadeIn('fast');
+    }, 7000);
+    $('.newsletter_close').click(function () {
+        $('.newsletter').toggleClass('active');
+    })
+    // Newsletter End 
 
 
     // Dark Mode 

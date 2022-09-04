@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="theme-color" content="var(--primary-color)">
+    <meta name="theme-color" content="#ff5236">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow">
@@ -100,7 +100,9 @@
                     </ul>
                 </div>
                 <div class="nav_menu desktop_only_menu" title="Menu">
-                    <img src="<?php bloginfo('template_url'); ?>/img/menu.png" alt="Menu" title="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <div class="logo desktop_only_logo">
                     <a href="<?php echo home_url(); ?>"><img src="<?php the_field('logo', 'option'); ?>" alt="Logo"

@@ -2,6 +2,7 @@
 get_header();
 ?>
 
+<?php get_template_part('template-part/newsletter'); ?>
 
 <?php get_template_part('template-part/highlight'); ?>
 
