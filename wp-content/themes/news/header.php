@@ -127,7 +127,9 @@
         <div class="container">
             <div class="header-nav-wrap">
                 <div class="nav_menu mobile_only_menu" title="Menu">
-                    <img src="<?php bloginfo('template_url'); ?>/img/menu.png" alt="Menu" title="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <div class="logo mobile_only_logo">
                     <a href="<?php echo home_url(); ?>"><img src="<?php the_field('logo', 'option'); ?>" alt="Logo"

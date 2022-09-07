@@ -173,7 +173,7 @@ p {
 }
 
 .logo img {
-    height: 40px;
+    height: auto;
     width: auto;
 }
 
@@ -1371,7 +1371,7 @@ p {
 }
 
 .footer_logo img {
-    height: 40px;
+    height: auto;
     width: auto;
 }
 
